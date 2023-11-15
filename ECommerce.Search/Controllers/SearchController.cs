@@ -18,5 +18,12 @@ namespace ECommerce.Search.Controllers
             return Ok(result);
         }
 
+
+        public async Task<ActionResult> SearchProductAsync(int ID)
+        {
+            var result = await repo.SearchProductAsync(ID);
+            return Ok(result);
+        }
+
     }
 }

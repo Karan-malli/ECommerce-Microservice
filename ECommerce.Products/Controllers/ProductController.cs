@@ -24,7 +24,7 @@ namespace ECommerce.Products.Controllers
         {
             var pro = await repo.GetProduct(id);
             var result= map.Map<DB.Product,Models.Product>(pro);
-            return View(result);
+            return Ok(result);
         }
     }
 }

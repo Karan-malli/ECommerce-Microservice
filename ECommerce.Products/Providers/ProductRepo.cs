@@ -11,7 +11,7 @@ namespace ECommerce.Products.Providers
         {
             this.db = db;
         }
-        public async Task<IEnumerable<Product>> GetAllProducts()
+        public async Task<List<Product>> GetAllProducts()
         {
             return await db.Products.ToListAsync();
         }

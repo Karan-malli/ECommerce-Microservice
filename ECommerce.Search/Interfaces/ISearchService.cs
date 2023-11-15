@@ -6,5 +6,7 @@ namespace ECommerce.Search.Interfaces
     public interface ISearchService
     {
         Task<List<Order>> SearchAsync(int ID);
+
+        Task<Product> SearchProductAsync(int ID);
     }
 }

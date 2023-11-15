@@ -15,8 +15,15 @@ namespace ECommerce.Search
             {
                 Config.BaseAddress = new Uri(builder.Configuration["Services:Orders"]);
             });
+            builder.Services.AddHttpClient("ProductService", config =>
+            {
+                config.BaseAddress = new Uri(builder.Configuration["Services:Products"]);
+            });
+
+
             builder.Services.AddScoped<ISearchService, SearchService>();
             builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IProductRepo, ProductService>();
 
             var app = builder.Build();
 

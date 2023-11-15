@@ -1,6 +1,6 @@
-﻿using ECommerce.Products.DB;
+﻿using ECommerce.Search.Models;
 
-namespace ECommerce.Products.Interfaces
+namespace ECommerce.Search.Interfaces
 {
     public interface IProductRepo
     {
